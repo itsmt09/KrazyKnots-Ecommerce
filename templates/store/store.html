@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>New designs with customization options</p>
+    <div class="pro-contain">
+        {% for product in products %}
+        <div class="pro" onclick="window.location.href='sproduct.html';">
+            <img src="{{product.images.url}}" alt="">
+            <div class="desc">
+                <span>{{product.brand_name}}</span>
+                <h3>{{product.product_name}}</h3>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>₹ {{product.price}}</h4>
+            </div>
+            <button class="cart-btn">Add to cart</button>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+</section>
+
+<section id="newsletter" class="section-p1 section-m1" >
+    <div class="news-txt">
+        <h3>Sign Up For NewsLetters</h3>
+        <p>Get updates through E-mail about our new products and exclusive offers!</p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Enter E-mail address">
+        <button>Sign Up</button>
+    </div>
+</section>
+
+
+{% endblock %}
