@@ -13,47 +13,18 @@
             <button class="n-button">Shop now</button>
     </section>
 
-     <section id="feature" class="section-p1">
-        <a href="ornaments.html">
-            <div id="fe-box">
-                <img src="{% static 'images/Ornaments.jpg' %}">
-                <h5>Ornaments</h5>
-            </div>
-        </a>
 
-        <a href="decoratives.html">
-            <div>
-                <img id="wall" src="{% static 'images/Wall hangings.jpg' %}">
-                <h5>Decoratives</h5>
-            </div>
-        </a>
-
-        <a href="pot.html">
-            <div>
-                <img id="pot" src="{% static 'images/Pot.jpg' %}">
-                <h5>Pot-holder</h5>
-            </div>
-        </a>
-
-        <a href="custom.html">
-            <div>
-                <img id="custom" src="{% static 'images/Cutomized.jpg' %}">
-                <h5>Custom order</h5>
-            </div>
-        </a>
-
-    </section> 
 
     <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p>New designs with customization options</p>
         <div class="pro-contain">
             {% for product in products %}
-            <div class="pro" onclick="window.location.href='sproduct.html';">
-                <img src="{{product.images.url}}" alt="">
+            <div class="pro" >
+                <a href="{{product.get_url}}"> <img src="{{product.images.url}}" alt=""> </a>
                 <div class="desc">
                     <span>{{product.brand_name}}</span>
-                    <h3>{{product.product_name}}</h3>
+                    <a href="{{product.get_url}}"> <h3>{{product.product_name}}</h3> </a>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -63,7 +34,11 @@
                     </div>
                     <h4>₹ {{product.price}}</h4>
                 </div>
+                {% if product.stock <= 0 %}
+                <h4> Out of stock </h4>
+                {% else %}
                 <button class="cart-btn">Add to cart</button>
+                {% endif %}
             </div>
             {% endfor %}
         </div>

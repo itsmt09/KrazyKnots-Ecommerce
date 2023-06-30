@@ -4,16 +4,18 @@
 
 {% block content %}
 
+
 <section id="product1" class="section-p1">
-    <h2>Featured Products</h2>
-    <p>New designs with customization options</p>
+    {% comment %} <h2>Featured Products</h2>
+    <p>New designs with customization options</p> {% endcomment %}
+    <p> {{product_count}}  products  found </p>
     <div class="pro-contain">
         {% for product in products %}
-        <div class="pro" onclick="window.location.href='sproduct.html';">
-            <img src="{{product.images.url}}" alt="">
+        <div class="pro" >
+           <a href="{{product.get_url}}"> <img src="{{product.images.url}}" alt=""> </a>
             <div class="desc">
                 <span>{{product.brand_name}}</span>
-                <h3>{{product.product_name}}</h3>
+                <a href="{{product.get_url}}"> <h3>{{product.product_name}}</h3> </a>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>

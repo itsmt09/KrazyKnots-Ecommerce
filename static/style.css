@@ -140,18 +140,19 @@ body {
     box-shadow: 20px 20px 25px rgba(0, 1, 1, 0.03);
     border: 1px solid rgba(175, 175, 172, 0.493);
     padding: 25px 30px;
+    height: 0px;
   }
 
   #feature div img{
-    width: 100px;
+   height: 104px;
 
   }
   
-  #wall {
+   /* #wall {
     height: 104px;
-    /* margin-left: 20px;
-    margin-right: 20px; */
-  }
+    margin-left: 20px;
+    margin-right: 20px; 
+  }  
 
   #custom {
     height: 104px;
@@ -159,6 +160,11 @@ body {
 
   #pot {
     height: 104px;
+  } */ */
+
+  #count p{
+    color: #1a1a1a;
+    font-weight: 400;
   }
 
   #feature div:hover {
@@ -195,6 +201,7 @@ body {
     margin: 15px 0;
     transition: 0.2s ease;
     position: relative;
+
   }
   #product1 .pro:hover {
     box-shadow: 5px 5px 20px rgba(9, 6, 77, 0.3);
@@ -248,7 +255,7 @@ body {
 
   #product1 .pro-contain {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-top: 20px;
     flex-wrap: wrap;
   }
