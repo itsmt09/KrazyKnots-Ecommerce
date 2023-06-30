@@ -21,13 +21,13 @@
 <body>
     {% comment %} header section start {% endcomment %}
     <section id="header">
-        <a href="#">
+        <a href="{% url 'home' %}">
             <img class="logo" src="{% static 'images/KK LOGO 1 - Copy-depositphotos-bgremover (1).png' %}" alt="logo image">
         </a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'store' %}">Store</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -41,6 +41,23 @@
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
+
+    <section id="feature" class="section-p1">
+        <a href="{% url 'store' %}">
+            <div id="fe-box">
+                {% comment %} <img src="{{ category.cat_img.url }}"> {% endcomment %}
+                <h5> All Products </h5>
+            </div>
+        </a>
+        {% for category in links %}
+        <a href="{{ category.get_url }}">
+            <div id="fe-box">
+                {% comment %} <img src="{{ category.cat_img.url }}"> {% endcomment %}
+                <h5>{{ category.category_name }}</h5>
+            </div>
+        </a>
+        {% endfor %}
+    </section> 
     {% comment %} Header section end {% endcomment %}
 
 

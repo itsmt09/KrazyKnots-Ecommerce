@@ -1,0 +1,143 @@
+
+    
+    {% extends 'base.html' %}
+
+    {% load static %}
+    
+    {% block content %}
+
+    <section id="pro-details" class="section-p1">
+         <div class="single-pro-image">
+            <img id="MainImg" src="{{ single_product.images.url }}" alt="">
+            <div class="small-images-div">
+                <div class="small-img-col">
+                    <img class="smallImg" src="images/Mcrame products/Earrings/earring 1d.png" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img class="smallImg" src="images/Mcrame products/Earrings/earring 1b.png" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img class="smallImg" src="images/Mcrame products/Earrings/earring 1c.png" alt="">
+                </div>
+             </div>
+         </div>
+
+         <div class="single-pro-details">
+            <h6>{{ single_product.brand_name }}</h6>
+            <h4>{{ single_product.product_name }}</h4>
+            <h2>{{ single_product.price }}</h2>
+            <select id="p-color">
+                <option>Select color</option>
+                <option>Creame</option>
+                <option>Blue</option>
+                <option>Purple</option>
+                <option>Yellow</option>
+                <option>Green</option>
+            </select>
+            <select id="p-quantity">
+                <option value="0" hidden selected>Quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            {% if single_product.stock <= 0 %}
+                <h4> Out of stock </h4>
+            {% else %}
+                <button class="p-cart-btn">Add To Cart</button>
+            {% endif %}
+            <h4>Product details</h4>
+            <!-- Measuring approximately 2.5 inches in length -->
+            <span> {{ single_product.description }}
+            </span>
+            {% comment %} <span>This handmade macrame earring by KrazyKnots is expertly crafted from high-quality macrame.
+                The earring features a dainty brass hoop.
+                This earring is lightweight and comfortable to wear for extended periods.
+                Its natural cream color pairs well with any outfit, making it a versatile accessory for any occasion. 
+                Perfect for those who appreciate artisanal craftsmanship and bohemian style,
+                 this macrame earring is sure to become a treasured accessory for years to come.
+          </span> {% endcomment %}
+         </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <div class="pro-contain">
+            <div class="pro">
+                <img src="images/Mcrame products/Earrings/hoop 5.jpg" alt="">
+                <div class="desc">
+                    <span>KrazyKnots</span>
+                    <h3>Macrame Hoops Earrings</h3>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$20</h4>
+                </div>
+                <button class="cart-btn">Add to cart</button>
+            </div>
+            
+            <div class="pro">
+                <img src="images/Mcrame products/Earrings/hoop 2.jpg" alt="">
+                <div class="desc">
+                    <span>KrazyKnots</span>
+                    <h3>Macrame Hoops Earrings</h3>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$20</h4>
+                </div>
+                <button class="cart-btn">Add to cart</button>
+            </div>
+
+            <div class="pro">
+                <img src="images/Mcrame products/Earrings/hoop 3a.jpg" alt="">
+                <div class="desc">
+                    <span>KrazyKnots</span>
+                    <h3>Macrame Hoops Earrings</h3>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$20</h4>
+                </div>
+                <button class="cart-btn">Add to cart</button>
+            </div>
+            <div class="pro">
+                <img src="images/Mcrame products/Earrings/hoop4a.jpg" alt="">
+                <div class="desc">
+                    <span>KrazyKnots</span>
+                    <h3>Macrame Hoops Earrings</h3>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$20</h4>
+                </div>
+                <button class="cart-btn">Add to cart</button>
+        </div>
+    </section>
+
+
+
+    {% comment %} <script src="script.js"></script> {% endcomment %}
+</body>
+
+{% endblock %}
+
+</html>
