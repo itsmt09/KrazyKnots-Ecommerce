@@ -46,7 +46,7 @@
             {% if single_product.stock <= 0 %}
                 <h4> Out of stock </h4>
             {% else %}
-                <button class="p-cart-btn">Add To Cart</button>
+                <a href="{% url 'add_cart' single_product.id %}"><button class="p-cart-btn">Add To Cart</button></a>
             {% endif %}
             <h4>Product details</h4>
             <!-- Measuring approximately 2.5 inches in length -->

@@ -25,15 +25,15 @@ smallImage.forEach(  img => {
 })
 
 // cart page
-const removeItem = document.getElementsByClassName("far fa-times-circle")
-console.log(removeItem)
+// const removeItem = document.getElementsByClassName("far fa-times-circle")
+// console.log(removeItem)
 
-for(i = 0; i < removeItem.length; i++)
-{
-    const button = removeItem[i]
-    button.addEventListener('click', function(event) {
-        const btnClicked = event.target
-        btnClicked.parentElement.parentElement.parentElement.remove()
-        event.preventDefault() //remove this later it stops refreshing 
-    })
-}
+// for(i = 0; i < removeItem.length; i++)
+// {
+//     const button = removeItem[i]
+//     button.addEventListener('click', function(event) {
+//         const btnClicked = event.target
+//         btnClicked.parentElement.parentElement.parentElement.remove()
+//         event.preventDefault() //remove this later it stops refreshing 
+//     })
+// }

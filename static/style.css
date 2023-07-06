@@ -568,8 +568,8 @@ body {
     text-align: center;
   }
   #cart table td:nth-child(4) input{
-    width: 60px;
-    padding: 10px 5px 10px 15px;
+    width: 50px;
+    padding: 10px 5px 10px 10px;
   }
   #cart-add
   {
