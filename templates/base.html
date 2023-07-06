@@ -42,22 +42,7 @@
         </div>
     </section>
 
-    <section id="feature" class="section-p1">
-        <a href="{% url 'store' %}">
-            <div id="fe-box">
-                {% comment %} <img src="{{ category.cat_img.url }}"> {% endcomment %}
-                <h5> All Products </h5>
-            </div>
-        </a>
-        {% for category in links %}
-        <a href="{{ category.get_url }}">
-            <div id="fe-box">
-                {% comment %} <img src="{{ category.cat_img.url }}"> {% endcomment %}
-                <h5>{{ category.category_name }}</h5>
-            </div>
-        </a>
-        {% endfor %}
-    </section> 
+
     {% comment %} Header section end {% endcomment %}
 
 
