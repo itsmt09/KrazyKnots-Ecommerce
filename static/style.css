@@ -356,6 +356,16 @@ body {
    }
 
 
+   #in_cart{
+    padding: 5px 5px;
+    border-radius: 2px;
+    border: none;
+    background: rgb(34, 216, 80);
+    color:rgb(247, 247, 199);
+    font-weight: 600;
+    font-size: 15px;
+   }
+
    #pro-details .single-pro-image{
     width: 35%;
     margin-right: 35px;
@@ -519,6 +529,19 @@ body {
   }
 
   /* Cart Page */
+  .cart-empty{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 80px;
+  }
+
+  .cart-empty h2{
+    padding-bottom: 25px;
+  }
+
   #cart{
     overflow-x: auto;
   }
@@ -844,7 +867,69 @@ footer {
 
   width: 65%;
 }
+
+.search input[type=text]{
+  width: 150px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+  margin-left: 2px;
+}
 }
 
 
 
+/* pagination */
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: Black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 5px;
+  border: solid orange 1px
+
+}
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {background-color: gray;
+color : white}
+
+    /* styling search bar */
+    .search input[type=text]{
+      width: 300px;
+      height: 25px;
+      border-radius: 25px;
+      border: none;
+  }
+       
+  .search{
+      margin: 7px;
+  }
+       
+  .search button{
+      background-color: #0074D9;
+      color: #f2f2f2;
+      padding: 5px 10px;
+      margin-right: 16px;
+      border: none;
+      cursor: pointer;
+  }
+
+  .search button:hover {
+    background-color: #4b839c;
+  }
+
+  .search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

@@ -9,6 +9,15 @@
         <p>Manage you cart items and proceed to checkout</p>
     </section>
 
+    {% if not cart_items %}
+{% comment %} id =hero is derived from homepage banner hero section {% endcomment %}
+    <div class="cart-empty" id="hero">
+        <h2> OOPS!! YOUR CART IS EMPTY </h2>
+        <a href="{% url 'store' %}"<button class="n-button"> Continue Shopping </button> </a>
+    </div>
+
+    {% else %}
+
     <section id="cart" class="section-p1">
         <table width="100%">
             <thead>
@@ -25,7 +34,7 @@
                 {% for cart_item in cart_items%}
                 <tr>
                     <td><img src="{{cart_item.product.images.url}}" alt=""></td>
-                    <td>{{ cart_item.product.product_name }}</td>
+                    <td><a href="{{ cart_item.product.get_url }}"> {{ cart_item.product.product_name }}</a></td> 
                     <td>{{ cart_item.product.price }}</td>
                     <td>
                         <a href="{% url 'decrease_cart_item' cart_item.product.id %}"> <button>-</button> </a>
@@ -39,6 +48,7 @@
             </tbody>
         </table>
     </section>
+    
 
      <section id="cart-add" class="section-p1">
         <div id="coupon">
@@ -48,7 +58,7 @@
                 <button class="n-button">
                     Apply
                 </button>
-            </div>
+            </div>  
         </div>
 
         <div id="subtotal">
@@ -68,7 +78,9 @@
                 </tr>
             </table>
             <button class="n-button">Proceed to checkout</button>
+            <a href="{% url 'store' %}"<button class="n-button"> Continue Shopping </button> </a>
         </div>
      </section>
+     {% endif %}
 
 {% endblock %}

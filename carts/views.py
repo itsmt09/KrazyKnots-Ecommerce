@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 
 from carts.models import Cart, CartItem
 from store.models import Product
-
+from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
 def _cart_id(request):
@@ -70,7 +70,7 @@ def cart(request, total_price=0, total_quantity=0, cart_items=None):
             total_price += (cart_item.product.price * cart_item.quantity)
             total_quantity += cart_item.quantity
         
-    except:
+    except ObjectDoesNotExist:
         pass
 
     context = {
