@@ -10,7 +10,7 @@
     </section>
 
     {% if not cart_items %}
-{% comment %} id =hero is derived from homepage banner hero section {% endcomment %}
+    {% comment %} id =hero is derived from homepage banner hero section {% endcomment %}
     <div class="cart-empty" id="hero">
         <h2> OOPS!! YOUR CART IS EMPTY </h2>
         <a href="{% url 'store' %}"<button class="n-button"> Continue Shopping </button> </a>
@@ -45,6 +45,7 @@
                     <td> <a href="{% url 'remove_cart_item' cart_item.product.id %}"><i class="far fa-times-circle"></i></a> </td>
                 </tr>   
                 {% endfor %}
+                {% endif %}
             </tbody>
         </table>
     </section>
@@ -81,6 +82,6 @@
             <a href="{% url 'store' %}"<button class="n-button"> Continue Shopping </button> </a>
         </div>
      </section>
-     {% endif %}
+     
 
 {% endblock %}

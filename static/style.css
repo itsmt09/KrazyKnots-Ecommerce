@@ -903,25 +903,25 @@ footer {
 .pagination a:hover:not(.active) {background-color: gray;
 color : white}
 
-    /* styling search bar */
-    .search input[type=text]{
-      width: 300px;
-      height: 25px;
-      border-radius: 25px;
-      border: none;
-  }
+ /* styling search bar */
+.search input[type=text]{
+  width: 300px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+}
        
-  .search{
-      margin: 7px;
-  }
+.search{
+  margin: 7px;
+}
        
-  .search button{
-      background-color: #0074D9;
-      color: #f2f2f2;
-      padding: 5px 10px;
-      margin-right: 16px;
-      border: none;
-      cursor: pointer;
+.search button{
+  background-color: #0074D9;
+  color: #f2f2f2;
+  padding: 5px 10px;
+  margin-right: 16px;
+  border: none;
+  cursor: pointer;
   }
 
   .search button:hover {
