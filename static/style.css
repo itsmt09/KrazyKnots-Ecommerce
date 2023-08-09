@@ -933,3 +933,72 @@ color : white}
     clear: both;
     display: table;
   }
+
+  /* registration page */
+  
+ /* Full-width input fields */
+.container-r input[type=text], .container-r input[type=password] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.container-r input[type=text]:focus, .container-r input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.container-r hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.container-r button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.container-r button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.container-r .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.container-r .cancelbtn, .container-r .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container-r {
+  padding: 16px;
+}
+
+/* Clear floats */
+.container-r .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+ .container-r .cancelbtn, .container-r .signupbtn {
+     width: 100%;
+  }
+}

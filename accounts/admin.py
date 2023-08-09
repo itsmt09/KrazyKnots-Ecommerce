@@ -5,7 +5,7 @@ from .models import Account
 
 #makes password field to read only in admin [anel]
 class AccountAdmin(UserAdmin):
-    list_display = ('first_name', 'last_name', 'username', 'email', 'last_login', 'date_joined', 'is_active')
+    list_display = ('first_name', 'last_name', 'username', 'email', 'phone', 'last_login', 'date_joined', 'is_active')
     list_display_links = ('first_name', "last_name", 'username', 'email')
     readonly_fields = ('last_login', 'date_joined')
     ordering = ('-date_joined',)
