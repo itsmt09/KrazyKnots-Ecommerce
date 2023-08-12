@@ -37,3 +37,9 @@ for(i = 0; i < removeItem.length; i++)
         //event.preventDefault() //remove this later it stops refreshing 
     })
 }
+
+
+// alerts timeout
+setTimeout(() => {
+    $('message').fadeOut('slow')
+}, 4000);
