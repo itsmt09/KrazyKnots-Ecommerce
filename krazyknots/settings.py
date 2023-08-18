@@ -147,8 +147,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SMTP Config
 
 #EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
-EMAIL_HOST = 'smtp.yandex.com'
-EMAIL_HOST_USER = 'manish.tekam.9@yandex.com'
-EMAIL_HOST_PASSWORD = 'wfddrpfefkriskhe'
-EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = 'f981ab351ed21c'
+EMAIL_HOST_PASSWORD = '69e606a66f3eac'
+EMAIL_PORT = 2525

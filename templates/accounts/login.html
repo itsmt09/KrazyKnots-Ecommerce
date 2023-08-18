@@ -5,13 +5,15 @@
 {% block content %}
 
     {% if request.GET.command == 'verification' %}
-
+    <div class="container-r">
       <div class="success-msg">
         <p>Thank you for registering with us.</P>
-          <br>
-        <p>We have sent you a verification link to your email address [request.GET.email]
+          
+        <p>We have sent you a verification link to your email address [{{request.GET.email}}]
           <br><br>
         <p> Already verified? <a href="#" style="color:dodgerblue">Login </a></p>
+      </div>
+    </div>
     
     {% else %}
 
@@ -30,7 +32,7 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
         
-        <a href="#" style="color:dodgerblue">Forgot password ?</a>
+        <a href="{% url 'forgot_password'  %}" style="color:dodgerblue">Forgot password ?</a>
     
         <div class="clearfix">
           <button type="button" class="cancelbtn">Cancel</button>
